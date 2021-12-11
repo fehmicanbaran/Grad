@@ -1,4 +1,6 @@
 <link rel="stylesheet" href=css/loginandsignup.css>
+<link rel="icon" href="img/gau.png" sizes="16x16" />
+
 
 <section class= "signup-form"> 
 <div class="center">
