@@ -29,7 +29,7 @@ include "include/dbh.inc.php";
             <ul>
                 <li class="">
                     <a href="admin.php?accounts" class="active"><span
-                            class="las la-user-check"></span><span>Accounts</span></a>
+                            class="las la-user-check"></span><span>Faculty</span></a>
 
                 </li>
             </ul>
@@ -41,8 +41,37 @@ include "include/dbh.inc.php";
             </ul>
             <ul>
                 <li>
-                    <a href="admin.php?timetable" class="active"><span class="las la-calendar-check"></span><span>Time
-                            Table</span></a>
+                    <a href="admin.php?timetable" class="active"><span class="las la-calendar-check"></span><span>Subject</span></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="admin.php?timetable" class="active"><span class="las la-calendar-check"></span><span>Create Advisor</span></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="admin.php?timetable" class="active"><span class="las la-calendar-check"></span><span>Course</span></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="admin.php?timetable" class="active"><span class="las la-calendar-check"></span><span>Room</span></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="admin.php?timetable" class="active"><span class="las la-calendar-check"></span><span>Time</span></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="admin.php?timetable" class="active"><span class="las la-calendar-check"></span><span>Schedule</span></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="admin.php?timetable" class="active"><span class="las la-calendar-check"></span><span>List</span></a>
                 </li>
             </ul>
         </div>
@@ -67,7 +96,7 @@ include "include/dbh.inc.php";
                 <div>
                     <h3>
                         <?php
-                $sql="select * from users";
+                $sql="select * from users where userType='admin'";
                 $result=mysqli_query($conn,$sql);
                 $row=mysqli_fetch_array($result);
                 echo $row[1];
@@ -76,7 +105,7 @@ include "include/dbh.inc.php";
                    
                     <small>
                         <?php
-                $sql="select * from users";
+                $sql="select * from users where userType='admin'";
                 $result=mysqli_query($conn,$sql);
                 $row=mysqli_fetch_array($result);
                 echo ucwords($row[4]);
@@ -106,7 +135,13 @@ include "include/dbh.inc.php";
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>14</h1>
+                        <h1><?php
+                        $sql="select userType='advisor', Count(*) from users";
+                        $result=mysqli_query($conn,$sql);
+                        $row=mysqli_num_rows($result);
+                        echo $row;
+                        ?>
+                        </h1>
                         <span>Total Advisor</span>
                     </div>
                     <div>
