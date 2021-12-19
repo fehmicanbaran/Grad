@@ -116,81 +116,11 @@ include "include/dbh.inc.php";
 
         </header>
         <main>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
-                        <h1>
-                            <?php
-                        $sql="select * from users where userType='advisor' ";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_num_rows($result);
-                        echo $row;
-                        ?>
-
-                        </h1>
-                        <span>Total Advisor</span>
-                    </div>
-                    <div>
-                        <span class="las la-users"></span>
-                    </div>
-
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>
-                            <?php
-                        $sql="select * from  faculty ";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_num_rows($result);
-                        echo $row;
-                        ?>
-                        </h1>
-                        <span>Total Faculty</span>
-                    </div>
-                    <div>
-                        <span class="las la-clipboard"></span>
-                    </div>
-
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>
-                            <?php
-                        $sql="select * from course";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_num_rows($result);
-                        echo $row;
-                        ?>
-
-                        </h1>
-                        <span>Total Course</span>
-                    </div>
-                    <div>
-                        <span class="las la-book"></span>
-                    </div>
-
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>
-                            <?php
-                        $sql="select * from classroom ";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_num_rows($result);
-                        echo $row;
-                        ?>
-                        </h1>
-                        <span>Total Classroom</span>
-                    </div>
-                    <div>
-                        <span class="las la-clipboard-list"></span>
-                    </div>
-                </div>
-            </div>
 
         </main>
 
         <body>
+
 
         </body>
 

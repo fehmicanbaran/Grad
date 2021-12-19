@@ -116,83 +116,39 @@ include "include/dbh.inc.php";
 
         </header>
         <main>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
-                        <h1>
-                            <?php
-                        $sql="select * from users where userType='advisor' ";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_num_rows($result);
-                        echo $row;
-                        ?>
 
-                        </h1>
-                        <span>Total Advisor</span>
-                    </div>
-                    <div>
-                        <span class="las la-users"></span>
-                    </div>
+            <body>
+                <form>
+                    <div class="container">
+                        <h1>Create Advisor</h1>
+                        <br>
+                        <hr>
+                        </br>
+                        <label for="name"><b>Full Name</b></label>
+                        </br>
+                        <input type="text" placeholder="Enter Full Name" name="name" id="name" required>
 
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>
-                            <?php
-                        $sql="select * from  faculty ";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_num_rows($result);
-                        echo $row;
-                        ?>
-                        </h1>
-                        <span>Total Faculty</span>
-                    </div>
-                    <div>
-                        <span class="las la-clipboard"></span>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                        <hr>
+
+
+                        <br>
+                        <button type="submit" class="registerbtn">Submit</button>
                     </div>
 
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>
-                            <?php
-                        $sql="select * from course";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_num_rows($result);
-                        echo $row;
-                        ?>
 
-                        </h1>
-                        <span>Total Course</span>
-                    </div>
-                    <div>
-                        <span class="las la-book"></span>
-                    </div>
-
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>
-                            <?php
-                        $sql="select * from classroom ";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_num_rows($result);
-                        echo $row;
-                        ?>
-                        </h1>
-                        <span>Total Classroom</span>
-                    </div>
-                    <div>
-                        <span class="las la-clipboard-list"></span>
-                    </div>
-                </div>
-            </div>
+                </form>
+            </body>
 
         </main>
 
-        <body>
-
-        </body>
 
 
     </div>
